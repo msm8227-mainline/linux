@@ -659,6 +659,8 @@ static int wcnss_probe(struct platform_device *pdev)
 		goto detach_pds;
 	}
 
+	rproc->auto_boot = false;
+
 	ret = rproc_add(rproc);
 	if (ret)
 		goto remove_iris;
