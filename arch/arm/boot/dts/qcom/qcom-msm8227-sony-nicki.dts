@@ -247,21 +247,17 @@
 			bias-pull-down;
 		};
 
-		/* VREG_VDD_V2P8 */
+		/* VREG_VDD_V2P8 (dsi_vdc) */
 		pm8038_l8: l8 {
-			// TODO: What does "lcm" mean?
-			regulator-always-on; // lcm
+			regulator-always-on; // TODO
 			regulator-min-microvolt = <2800000>;
 			regulator-max-microvolt = <2800000>;
 			bias-pull-down;
-			// TODO no load in downstream
-			//regulator-system-load = <100000>;
-			//regulator-allow-set-load;
 		};
 
-		/* VREG_L9_V2P85 */
+		/* VREG_L9_V2P85 (Accelerometer, proximity, touchscreen) */
 		pm8038_l9: l9 {
-			regulator-always-on; // accel + proxim, ts
+			regulator-always-on;
 			regulator-min-microvolt = <2850000>;
 			regulator-max-microvolt = <2850000>;
 			bias-pull-down;
@@ -326,7 +322,17 @@
 			bias-pull-down;
 		};
 
-		// TODO: l20 - adding it makes the system not boot
+		/* VREG_L20_V1P25 */
+		pm8038_l20: l20 {
+			regulator-always-on;
+			regulator-min-microvolt = <1250000>;
+			regulator-max-microvolt = <1250000>;
+			bias-pull-down;
+
+			// TODO: enabling these makes it freeze
+			// regulator-system-load = <10000>;
+			// regulator-allow-set-load;
+		};
 
 		/* VREG_A2_V1P9 */
 		pm8038_l21: l21 {
@@ -342,14 +348,13 @@
 			regulator-max-microvolt = <2950000>;
 			bias-pull-down;
 
-			regulator-system-load = <100000>;
+			regulator-system-load = <10000>;
 			regulator-allow-set-load;
 		};
 
 		/* VREG_PLL2_V1P8 */
 		pm8038_l23: l23 {
 			regulator-always-on;
-			// ss?
 			regulator-min-microvolt = <1800000>;
 			regulator-max-microvolt = <1800000>;
 			bias-pull-down;
@@ -357,7 +362,6 @@
 
 		/* VREG_MEM_V1P15 */
 		pm8038_l24: l24 {
-			// ss?
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1150000>;
 			bias-pull-down;
@@ -372,14 +376,24 @@
 			regulator-max-microvolt = <1740000>;
 		};
 
-		// TODO: l26 makes it reboot into fastboot
+		/* VREG_PXO_V1P05 */
+		pm8038_l26: l26 {
+			regulator-always-on;
+			regulator-min-microvolt = <1050000>;
+			regulator-max-microvolt = <1050000>;
+			bias-pull-down;
+
+			// TODO: enabling these makes it reboot
+			// regulator-system-load = <10000>;
+			// regulator-allow-set-load;
+		};
 
 		/* VREG_QFUSE_V1P8 */
 		pm8038_lvs1: lvs1 {
 			bias-pull-down;
 		};
 
-		/* Unlabeled */
+		/* Unlabeled (lcd_lvs2) */
 		pm8038_lvs2: lvs2 {
 			regulator-always-on; // accel + proxim, ts
 			bias-pull-down;
@@ -572,7 +586,6 @@
 &usb_hs1_phy {
 	v3p3-supply = <&pm8038_l3>;
 	v1p8-supply = <&pm8038_l4>;
-	//qcom,init-seq = /bits/ 8 <0x44 0x80 0x38 0x81 0x3C 0x82 0x13 0x83>; // TODO -1?
 };
 
 &usb1 {
