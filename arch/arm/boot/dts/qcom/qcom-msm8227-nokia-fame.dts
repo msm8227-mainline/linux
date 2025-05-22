@@ -29,19 +29,6 @@
 		#address-cells = <1>;
 		#size-cells = <1>;
 		ranges;
-
-		// from downstream
-		// TODO: move to msm8930.dtsi?
-		fixed-low-area@97e00000 {
-			reg = <0x97e00000 0x200000>;
-			no-map;
-		};
-
-		fixed-high-area@9b800000 {
-			reg = <0x9b800000 0x100000>;
-			no-map;
-		};
-
 		// from lk
 		// TODO: I'm not sure, maybe can be removed
 		boot1@8ff00000 {
