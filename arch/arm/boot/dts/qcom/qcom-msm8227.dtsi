@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0
 /dts-v1/;
 
-#include "qcom-msm8930.dtsi"
+#include "qcom-msm8930-common.dtsi"
 
 / {
 	model = "Qualcomm MSM8227";
