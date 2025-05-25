@@ -125,5 +125,5 @@
 	};
 };
 
-&cpu0 { operating-points-v2 = <&cpu_opp_table>; };
-&cpu1 { operating-points-v2 = <&cpu_opp_table>; };
+&cpu0 { operating-points-v2 = <&cpu_opp_table>; vdd-core-supply = <&saw0_vreg>; };
+&cpu1 { operating-points-v2 = <&cpu_opp_table>; vdd-core-supply = <&saw1_vreg>; };
