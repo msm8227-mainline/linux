@@ -444,7 +444,7 @@
 		};
 
 		saw0: power-manager@2089000 {
-			compatible = "qcom,apq8064-saw2-v1.1-cpu", "qcom,msm8960-saw2-cpu", "qcom,saw2";
+			compatible = "qcom,apq8064-saw2-v1.1-cpu", "qcom,saw2";
 			reg = <0x02089000 0x1000>, <0x02009000 0x1000>;
 
 			/* S5 */
@@ -455,7 +455,7 @@
 		};
 
 		saw1: power-manager@2099000 {
-			compatible = "qcom,apq8064-saw2-v1.1-cpu", "qcom,msm8960-saw2-cpu", "qcom,saw2";
+			compatible = "qcom,apq8064-saw2-v1.1-cpu", "qcom,saw2";
 			reg = <0x02099000 0x1000>, <0x02009000 0x1000>;
 
 			/* S6 */

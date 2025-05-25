@@ -292,8 +292,6 @@ static int qcom_cpufreq_apq8064_name_version(struct device *cpu_dev,
 
 	drv->versions = (1 << speed);
 
-	pr_err("APQ8064 OK\n");
-
 	kfree(speedbin);
 	return ret;
 }
@@ -590,12 +588,10 @@ static int qcom_cpufreq_probe(struct platform_device *pdev)
 		}
 
 		if (config.supported_hw || config.regulator_names) {
-			pr_err("setting regulator for cpufreq\n");
 			drv->cpus[cpu].opp_token = dev_pm_opp_set_config(cpu_dev, &config);
 			if (drv->cpus[cpu].opp_token < 0) {
 				ret = drv->cpus[cpu].opp_token;
 				dev_err(cpu_dev, "Failed to set OPP config\n");
-				pr_err("err: %d\n", ret);
 				goto free_opp;
 			}
 		}
