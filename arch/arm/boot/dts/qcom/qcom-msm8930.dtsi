@@ -12,8 +12,8 @@
 		/* SPEED is always 0 for MSM8227 */
 		opp-384000000 {
 			opp-hz = /bits/ 64 <384000000>;
-			opp-microvolt-speed0-pvs0 = <900000 900000 900000>;
-			opp-microvolt-speed0-pvs1 = <900000 900000 900000>;
+			opp-microvolt-speed0-pvs0 = <950000 950000 950000>;
+			opp-microvolt-speed0-pvs1 = <925000 925000 925000>;
 			opp-microvolt-speed0-pvs3 = <900000 900000 900000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <1>;
@@ -21,101 +21,74 @@
 			clock-latency-ns = <244144>;
 		};
 
-		opp-432000000 {
-			opp-hz = /bits/ 64 <432000000>;
-			opp-microvolt-speed0-pvs0 = <925000 925000 925000>;
-			opp-microvolt-speed0-pvs1 = <925000 925000 925000>;
-			opp-microvolt-speed0-pvs3 = <925000 925000 925000>;
-			opp-supported-hw = <0x4007>;
-			opp-level = <1>;
-		};
-
 		opp-486000000 {
 			opp-hz = /bits/ 64 <486000000>;
-			opp-microvolt-speed0-pvs0 = <925000 925000 925000>;
-			opp-microvolt-speed0-pvs1 = <925000 925000 925000>;
-			opp-microvolt-speed0-pvs3 = <925000 925000 925000>;
-			opp-supported-hw = <0x4007>;
-			opp-level = <1>;
-		};
-
-		opp-540000000 {
-			opp-hz = /bits/ 64 <540000000>;
-			opp-microvolt-speed0-pvs0 = <937500 937500 937500>;
-			opp-microvolt-speed0-pvs1 = <937500 937500 937500>;
-			opp-microvolt-speed0-pvs3 = <937500 937500 937500>;
+			opp-microvolt-speed0-pvs0 = <975000 975000 975000>;
+			opp-microvolt-speed0-pvs1 = <950000 950000 950000>;
+			opp-microvolt-speed0-pvs3 = <900000 900000 900000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <2>;
 		};
 
 		opp-594000000 {
 			opp-hz = /bits/ 64 <594000000>;
-			opp-microvolt-speed0-pvs0 = <962500 962500 962500>;
-			opp-microvolt-speed0-pvs1 = <962500 962500 962500>;
-			opp-microvolt-speed0-pvs3 = <962500 962500 962500>;
-			opp-supported-hw = <0x4007>;
-			opp-level = <2>;
-		};
-
-		opp-648000000 {
-			opp-hz = /bits/ 64 <648000000>;
-			opp-microvolt-speed0-pvs0 = <987500 987500 987500>;
-			opp-microvolt-speed0-pvs1 = <987500 987500 987500>;
-			opp-microvolt-speed0-pvs3 = <987500 987500 987500>;
+			opp-microvolt-speed0-pvs0 = <1000000 1000000 1000000>;
+			opp-microvolt-speed0-pvs1 = <975000 975000 975000>;
+			opp-microvolt-speed0-pvs3 = <925000 925000 925000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <2>;
 		};
 
 		opp-702000000 {
-		opp-hz = /bits/ 64 <702000000>;
-			opp-microvolt-speed0-pvs0 = <1000000 1000000 1000000>;
+			opp-hz = /bits/ 64 <702000000>;
+			opp-microvolt-speed0-pvs0 = <1025000 1025000 1025000>;
 			opp-microvolt-speed0-pvs1 = <1000000 1000000 1000000>;
+			opp-microvolt-speed0-pvs3 = <950000 950000 950000>;
+			opp-supported-hw = <0x4007>;
+			opp-level = <2>;
+		};
+
+		opp-810000000 {
+			opp-hz = /bits/ 64 <810000000>;
+			opp-microvolt-speed0-pvs0 = <1075000 1075000 1075000>;
+			opp-microvolt-speed0-pvs1 = <1050000 1050000 1050000>;
 			opp-microvolt-speed0-pvs3 = <1000000 1000000 1000000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <3>;
 		};
 
-		opp-756000000 {
-			opp-hz = /bits/ 64 <756000000>;
-			opp-microvolt-speed0-pvs0 = <1025000 1025000 1025000>;
-			opp-microvolt-speed0-pvs1 = <1025000 1025000 1025000>;
+		opp-918000000 {
+			opp-hz = /bits/ 64 <918000000>;
+			opp-microvolt-speed0-pvs0 = <1100000 1100000 1100000>;
+			opp-microvolt-speed0-pvs1 = <1075000 1075000 1075000>;
 			opp-microvolt-speed0-pvs3 = <1025000 1025000 1025000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <3>;
 		};
 
-		opp-810000000 {
-			opp-hz = /bits/ 64 <810000000>;
-			opp-microvolt-speed0-pvs0 = <1062500 1062500 1062500>;
-			opp-microvolt-speed0-pvs1 = <1062500 1062500 1062500>;
-			opp-microvolt-speed0-pvs3 = <1062500 1062500 1062500>;
+		opp-1026000000 {
+			opp-hz = /bits/ 64 <1026000000>;
+			opp-microvolt-speed0-pvs0 = <1125000 1125000 1125000>;
+			opp-microvolt-speed0-pvs1 = <1100000 1100000 1100000>;
+			opp-microvolt-speed0-pvs3 = <1050000 1050000 1050000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <3>;
 		};
 
-		opp-864000000 {
-			opp-hz = /bits/ 64 <864000000>;
-			opp-microvolt-speed0-pvs0 = <1062500 1062500 1062500>;
-			opp-microvolt-speed0-pvs1 = <1062500 1062500 1062500>;
-			opp-microvolt-speed0-pvs3 = <1062500 1062500 1062500>;
-			opp-supported-hw = <0x4007>;
-			opp-level = <4>;
-		};
-
-		opp-918000000 {
-			opp-hz = /bits/ 64 <918000000>;
-			opp-microvolt-speed0-pvs0 = <1087500 1087500 1087500>;
-			opp-microvolt-speed0-pvs1 = <1087500 1087500 1087500>;
-			opp-microvolt-speed0-pvs3 = <1087500 1087500 1087500>;
-			opp-supported-hw = <0x4007>;
-			opp-level = <4>;
-		};
-
-		opp-972000000 {
-			opp-hz = /bits/ 64 <972000000>;
-			opp-microvolt-speed0-pvs0 = <1100000 1100000 1100000>;
-			opp-microvolt-speed0-pvs1 = <1100000 1100000 1100000>;
+		opp-1134000000 {
+			opp-hz = /bits/ 64 <1134000000>;
+			opp-microvolt-speed0-pvs0 = <1175000 1175000 1175000>;
+			opp-microvolt-speed0-pvs1 = <1150000 1150000 1150000>;
 			opp-microvolt-speed0-pvs3 = <1100000 1100000 1100000>;
+			opp-supported-hw = <0x4007>;
+			opp-level = <4>;
+		};
+
+		opp-1188000000 {
+			opp-hz = /bits/ 64 <1188000000>;
+			opp-microvolt-speed0-pvs0 = <1200000 1200000 1200000>;
+			opp-microvolt-speed0-pvs1 = <1175000 1175000 1175000>;
+			opp-microvolt-speed0-pvs3 = <1125000 1125000 1125000>;
 			opp-supported-hw = <0x4007>;
 			opp-level = <4>;
 		};
