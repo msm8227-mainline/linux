@@ -18,7 +18,7 @@
 			opp-microvolt-speed0-pvs0 = <900000 900000 900000>;
 			opp-microvolt-speed0-pvs1 = <900000 900000 900000>;
 			opp-microvolt-speed0-pvs3 = <900000 900000 900000>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <1>;
 			/* give enough time to switch between PLL8 and HFPLL */
 			clock-latency-ns = <244144>;
@@ -29,7 +29,7 @@
 			opp-microvolt-speed0-pvs0 = <925000 925000 925000>;
 			opp-microvolt-speed0-pvs1 = <925000 925000 925000>;
 			opp-microvolt-speed0-pvs3 = <925000 925000 925000>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <1>;
 		};
 
@@ -38,7 +38,7 @@
 			opp-microvolt-speed0-pvs0 = <925000 925000 925000>;
 			opp-microvolt-speed0-pvs1 = <925000 925000 925000>;
 			opp-microvolt-speed0-pvs3 = <925000 925000 925000>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <1>;
 		};
 
@@ -47,7 +47,7 @@
 			opp-microvolt-speed0-pvs0 = <937500 937500 937500>;
 			opp-microvolt-speed0-pvs1 = <937500 937500 937500>;
 			opp-microvolt-speed0-pvs3 = <937500 937500 937500>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <2>;
 		};
 
@@ -56,7 +56,7 @@
 			opp-microvolt-speed0-pvs0 = <962500 962500 962500>;
 			opp-microvolt-speed0-pvs1 = <962500 962500 962500>;
 			opp-microvolt-speed0-pvs3 = <962500 962500 962500>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <2>;
 		};
 
@@ -65,7 +65,7 @@
 			opp-microvolt-speed0-pvs0 = <987500 987500 987500>;
 			opp-microvolt-speed0-pvs1 = <987500 987500 987500>;
 			opp-microvolt-speed0-pvs3 = <987500 987500 987500>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <2>;
 		};
 
@@ -74,7 +74,7 @@
 			opp-microvolt-speed0-pvs0 = <1000000 1000000 1000000>;
 			opp-microvolt-speed0-pvs1 = <1000000 1000000 1000000>;
 			opp-microvolt-speed0-pvs3 = <1000000 1000000 1000000>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <3>;
 		};
 
@@ -83,7 +83,7 @@
 			opp-microvolt-speed0-pvs0 = <1025000 1025000 1025000>;
 			opp-microvolt-speed0-pvs1 = <1025000 1025000 1025000>;
 			opp-microvolt-speed0-pvs3 = <1025000 1025000 1025000>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <3>;
 		};
 
@@ -92,7 +92,7 @@
 			opp-microvolt-speed0-pvs0 = <1062500 1062500 1062500>;
 			opp-microvolt-speed0-pvs1 = <1062500 1062500 1062500>;
 			opp-microvolt-speed0-pvs3 = <1062500 1062500 1062500>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <3>;
 		};
 
@@ -101,7 +101,7 @@
 			opp-microvolt-speed0-pvs0 = <1062500 1062500 1062500>;
 			opp-microvolt-speed0-pvs1 = <1062500 1062500 1062500>;
 			opp-microvolt-speed0-pvs3 = <1062500 1062500 1062500>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <4>;
 		};
 
@@ -110,7 +110,7 @@
 			opp-microvolt-speed0-pvs0 = <1087500 1087500 1087500>;
 			opp-microvolt-speed0-pvs1 = <1087500 1087500 1087500>;
 			opp-microvolt-speed0-pvs3 = <1087500 1087500 1087500>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <4>;
 		};
 
@@ -119,7 +119,7 @@
 			opp-microvolt-speed0-pvs0 = <1100000 1100000 1100000>;
 			opp-microvolt-speed0-pvs1 = <1100000 1100000 1100000>;
 			opp-microvolt-speed0-pvs3 = <1100000 1100000 1100000>;
-			opp-supported-hw = <0x4007>;
+			opp-supported-hw = <0x01>;
 			opp-level = <4>;
 		};
 	};
