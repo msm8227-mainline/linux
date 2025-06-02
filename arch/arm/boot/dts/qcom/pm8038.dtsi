@@ -106,6 +106,12 @@
 	};
 };
 
+&usb1 {
+	vbus-supply = <&usb_5v>;
+	mux-controls = <&usb_switch>;
+	mux-control-names = "usb_switch";
+};
+
 / {
     /*
 	 * These channels from the ADC are simply hardware monitors.
@@ -121,5 +127,20 @@
 			    <&xoadc 0x00 0x0c>, /* Reference voltage 1.25V */
 			    <&xoadc 0x00 0x0d>, /* Reference voltage 0.625V */
 			    <&xoadc 0x00 0x0e>; /* Charger temperature */
+	};
+
+	usb_switch: mux-controller {
+		compatible = "gpio-mux";
+		#mux-control-cells = <0>;
+
+		mux-gpios = <&msmgpio 97 GPIO_ACTIVE_HIGH>;
+	};
+
+	usb_5v: gpio-regulator {
+		compatible = "regulator-fixed";
+		regulator-name = "External 5V";
+		gpios = <&msmgpio 63 GPIO_ACTIVE_HIGH>;
+		startup-delay-us = <10000>; // TODO: verify me
+		enable-active-high;
 	};
 };
