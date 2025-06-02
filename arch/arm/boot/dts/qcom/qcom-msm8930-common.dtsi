@@ -113,7 +113,7 @@
 
 	cpu-pmu {
 		compatible = "qcom,krait-pmu";
-		interrupts = <GIC_PPI 10 0x304>; // TODO: macros...
+		interrupts = <GIC_PPI 10 (GIC_CPU_MASK_SIMPLE(2) | IRQ_TYPE_LEVEL_HIGH)>;
 	};
 
 	clocks {
@@ -220,7 +220,7 @@
 	usb_5v: gpio-regulator {
 		compatible = "regulator-fixed";
 		regulator-name = "External 5V";
-		gpios = <&msmgpio 63 GPIO_ACTIVE_LOW>;
+		gpios = <&msmgpio 63 GPIO_ACTIVE_HIGH>;
 		startup-delay-us = <10000>; // TODO: verify me
 		enable-active-high;
 	};
@@ -284,8 +284,7 @@
 		};
 
 		timer@200a000 {
-			compatible = "qcom,kpss-timer",
-					 "qcom,kpss-wdt-msm8960", "qcom,msm-timer";
+			compatible = "qcom,kpss-wdt-msm8960", "qcom,kpss-timer", "qcom,msm-timer";
 			// TODO: labels...
 			interrupts = <1 1 0x301>,
 					 <1 2 0x301>,
@@ -301,6 +300,7 @@
 			reg = <0x800000 0x4000>;
 
 			gpio-controller;
+			gpio-ranges = <&msmgpio 0 0 152>;
 			#gpio-cells = <2>;
 			interrupt-controller;
 			#interrupt-cells = <2>;
@@ -610,7 +610,7 @@
 		};
 
 		qfprom: efuse@700000 {
-			compatible = "qcom,qfprom";
+			compatible = "qcom,msm8960-qfprom", "qcom,qfprom";
 			reg	= <0x00700000 0x1000>;
 			#address-cells = <1>;
 			#size-cells	= <1>;
@@ -739,7 +739,7 @@
 			status = "disabled";
 
 			iris {
-				compatible = "qcom,wcn3660"; // TODO: 3620?
+				compatible = "qcom,wcn3660";
 
 				clocks = <&cxo_board>;
 				clock-names = "xo";
