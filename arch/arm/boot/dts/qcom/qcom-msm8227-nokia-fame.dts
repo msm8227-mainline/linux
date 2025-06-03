@@ -511,15 +511,6 @@
 	vmmc-supply = <&pm8038_l5>;
 	vqmmc-supply = <&pm8038_l11>;
 
-	qcom,vdd-voltage-level = <2950000 2950000>;
-	qcom,vdd-current_level = <9000 200000>;
-	qcom,vdd-always-on;
-	qcom,vdd-lpm_sup;
-
-	qcom,vdd-io-voltage-level = <1800000 1800000>;
-	qcom,vdd-io-current_level = <0 200000>; // no lpm for vdd-io
-	qcom,vdd-io-always-on;
-
 	pinctrl-0 = <&sdcc1_pins_active>;
 	pinctrl-names = "default";
 
@@ -532,22 +523,6 @@
 	vqmmc-supply = <&pm8038_l22>;
 
 	non-removable;
-
-	// Detection works,
-	// but we get DMA and I/O errors
-	// I did some debugging and seems it stuck on invalid start bit
-	// downstream also spams with I/O error and busy device,
-	// so I don't know how to fix it
-
-	qcom,vdd-voltage-level = <2950000 2950000>;
-	qcom,vdd-current_level = <9000 800000>;
-	qcom,vdd-always-on; // I guess
-	qcom,vdd-lpm_sup;
-
-	qcom,vdd-io-voltage-level = <1850000 2950000>;
-	qcom,vdd-io-current_level = <2000 16000>;
-	//qcom,vdd-io-always-on;
-	qcom,vdd-io-lpm_sup;
 
 	pinctrl-0 = <&sdcc3_pins_active>;
 	pinctrl-1 = <&sdcc3_pins_sleep>;
