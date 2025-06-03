@@ -655,7 +655,7 @@
 		sdcc3bam: dma-controller@12182000 {
 			compatible = "qcom,bam-v1.3.0";
 			reg = <0x12182000 0x2000>;
-			interrupts = <GIC_SPI 96 IRQ_TYPE_LEVEL_HIGH>; // TODO: labels...
+			interrupts = <GIC_SPI 96 IRQ_TYPE_LEVEL_HIGH>;
 			clocks = <&gcc SDC3_H_CLK>;
 			clock-names = "bam_clk";
 			#dma-cells = <1>;
@@ -728,7 +728,7 @@
 			smd-edge {
 				interrupts = <GIC_SPI 198 IRQ_TYPE_EDGE_RISING>;
 
-				qcom,ipc = <&l2cc 8 25>; // TODO: labels...
+				qcom,ipc = <&l2cc 8 25>;
 				qcom,smd-edge = <6>;
 
 				label = "riva";
