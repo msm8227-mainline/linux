@@ -47,7 +47,7 @@
 	cpus {
 		#address-cells = <1>;
 		#size-cells = <0>;
-		interrupts = <GIC_PPI 14 0x304>; // TODO: nuke me
+		interrupts = <GIC_PPI 14 (GIC_CPU_MASK_SIMPLE(2) | IRQ_TYPE_LEVEL_HIGH)>;
 
 		cpu0: cpu@0 {
 			compatible = "qcom,krait";
