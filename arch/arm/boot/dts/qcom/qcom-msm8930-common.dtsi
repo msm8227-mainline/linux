@@ -376,7 +376,7 @@
 			// TODO: add missing stuff from msm8960
 			compatible = "qcom,rpm-msm8930";
 			reg	= <0x108000 0x1000>;
-			qcom,ipc = <&l2cc 0x8 2>; // TODO: labels...
+			qcom,ipc = <&l2cc 0x8 2>;
 
 			interrupts = <GIC_SPI 19 IRQ_TYPE_EDGE_RISING>,
 					  <GIC_SPI 21 IRQ_TYPE_EDGE_RISING>,
