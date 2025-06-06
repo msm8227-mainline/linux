@@ -178,13 +178,13 @@
 			regulator-max-microvolt = <1150000>;
 			qcom,switch-mode-frequency = <3200000>;
 			bias-pull-down;
+			qcom,force-mode = <QCOM_RPM_FORCE_MODE_AUTO>;
 		};
 
 		/* VREG_S4_V2P2 */
 		pm8038_s4: s4 {
 			regulator-always-on;
-			// TODO: Downstream lists 1950000 as min uV, but nicki dts has 2.2v; investigate
-			regulator-min-microvolt = <2200000>; // 1950000
+			regulator-min-microvolt = <1950000>;
 			regulator-max-microvolt = <2200000>;
 			qcom,switch-mode-frequency = <1600000>;
 			bias-pull-down;
@@ -266,7 +266,7 @@
 		/* VREG_L10_V3P0 */
 		pm8038_l10: l10 {
 			regulator-min-microvolt = <2900000>;
-			regulator-max-microvolt = <3000000>; // TODO: nicki dts has 2900000 here, hm
+			regulator-max-microvolt = <3000000>;
 			bias-pull-down;
 		};
 

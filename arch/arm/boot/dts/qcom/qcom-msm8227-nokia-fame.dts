@@ -150,10 +150,10 @@
 
 		/* SMPS */
 		pm8038_s1: s1 {
-			regulator-always-on;
 			regulator-min-microvolt = <500000>;
 			regulator-max-microvolt = <1150000>;
 			qcom,switch-mode-frequency = <4800000>;
+			bias-pull-down;
 		};
 
 		pm8038_s2: s2 {
@@ -162,14 +162,13 @@
 			regulator-max-microvolt = <1400000>;
 			qcom,switch-mode-frequency = <1600000>;
 			bias-pull-down;
-
-			qcom,force-mode = <QCOM_RPM_FORCE_MODE_LPM>;
 		};
 
 		pm8038_s3: s3 {
 			regulator-min-microvolt = <1150000>;
 			regulator-max-microvolt = <1150000>;
 			qcom,switch-mode-frequency = <3200000>;
+			bias-pull-down;
 			qcom,force-mode = <QCOM_RPM_FORCE_MODE_AUTO>;
 		};
 
