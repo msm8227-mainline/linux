@@ -2,6 +2,7 @@
 /dts-v1/;
 
 #include "qcom-msm8930-common.dtsi"
+#include "qcom-msm8930-pm8038.dtsi"
 
 / {
 	model = "Qualcomm MSM8227";
