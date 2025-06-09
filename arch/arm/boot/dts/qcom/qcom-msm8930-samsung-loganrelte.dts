@@ -32,32 +32,8 @@
 
 	gpio-keys {
 		compatible = "gpio-keys";
-
 		pinctrl-names = "default";
 		pinctrl-0 = <&gpio_keys_pin_a>;
-
-		key-home {
-			label = "Home";
-			gpios = <&msmgpio 40 GPIO_ACTIVE_LOW>;
-			debounce-interval = <5>;
-			linux,code = <KEY_HOMEPAGE>;
-			wakeup-event-action = <EV_ACT_ASSERTED>;
-			wakeup-source;
-		};
-
-		key-volume-up {
-			label = "Volume Up";
-			gpios = <&msmgpio 50 GPIO_ACTIVE_LOW>;
-			debounce-interval = <5>;
-			linux,code = <KEY_VOLUMEUP>;
-		};
-
-		key-volume-down {
-			label = "Volume Down";
-			gpios = <&msmgpio 81 GPIO_ACTIVE_LOW>;
-			debounce-interval = <5>;
-			linux,code = <KEY_VOLUMEDOWN>;
-		};
 	};
 };
 
