@@ -2,7 +2,7 @@
 #include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
 
 &ssbi {
-	pmicintc: pmic@0 {
+	pm8038: pmic@0 {
 		compatible = "qcom,pm8038";
 		interrupt-parent = <&msmgpio>;
 		interrupts = <104 IRQ_TYPE_LEVEL_LOW>;
@@ -14,7 +14,7 @@
 		pwrkey@1c {
 			compatible = "qcom,pm8921-pwrkey";
 			reg = <0x1c>;
-			interrupt-parent = <&pmicintc>;
+			interrupt-parent = <&pm8038>;
 			interrupts = <50 IRQ_TYPE_EDGE_RISING>, <51 IRQ_TYPE_EDGE_RISING>;
 			debounce = <15625>;
 			pull-up;
@@ -49,7 +49,7 @@
 
 		rtc@11d {
 			compatible = "qcom,pm8921-rtc";
-			interrupt-parent = <&pmicintc>;
+			interrupt-parent = <&pm8038>;
 			interrupts = <39 IRQ_TYPE_EDGE_RISING>;
 			reg = <0x11d>;
 			allow-set-time;
@@ -58,7 +58,7 @@
 		xoadc: xoadc@197 {
 			compatible = "qcom,pm8038-adc";
 			reg = <197>;
-			interrupts-extended = <&pmicintc 78 IRQ_TYPE_EDGE_RISING>;
+			interrupts-extended = <&pm8038 78 IRQ_TYPE_EDGE_RISING>;
 			#address-cells = <2>;
 			#size-cells = <0>;
 			#io-channel-cells = <2>;
