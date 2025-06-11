@@ -310,13 +310,11 @@ static const struct qcom_rpm_resource msm8930_rpm_resource_table[] = {
 	[QCOM_RPM_PM8038_CLK2] =		{ 158, 99, 64, 2 },
 	[QCOM_RPM_PM8038_LVS1] =		{ 160, 101, 65, 1 },
 	[QCOM_RPM_PM8038_LVS2] =		{ 161, 102, 66, 1 },
-	// [QCOM_RPM_PM8038_NCP] =			{ 162, 103, 80, 2 },
 	[QCOM_RPM_CXO_BUFFERS] =		{ 164, 105, 81, 1 },
 	[QCOM_RPM_USB_OTG_SWITCH] =		{ 165, 106, 82, 1 },
 	[QCOM_RPM_HDMI_SWITCH] =		{ 166, 107, 83, 1 },
 	[QCOM_RPM_QDSS_CLK] =			{ 167, 108, 7, 1 },
 	[QCOM_RPM_VOLTAGE_CORNER] =		{ 168, 109, 87, 1 },
-	// [QCOM_RPM_DDR_DMM] =			{ ??, ??, 84, 2 },
 };
 static const struct qcom_rpm_data msm8930_template = {
 	.version = 3,
