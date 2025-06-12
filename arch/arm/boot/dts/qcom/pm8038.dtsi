@@ -2,7 +2,7 @@
 #include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
 
 &ssbi {
-	pm8038: pmic@0 {
+	pm8038: pmic {
 		compatible = "qcom,pm8038";
 		interrupt-parent = <&msmgpio>;
 		interrupts = <104 IRQ_TYPE_LEVEL_LOW>;
@@ -14,8 +14,7 @@
 		pwrkey@1c {
 			compatible = "qcom,pm8921-pwrkey";
 			reg = <0x1c>;
-			interrupt-parent = <&pm8038>;
-			interrupts = <50 IRQ_TYPE_EDGE_RISING>, <51 IRQ_TYPE_EDGE_RISING>;
+			interrupts-extended = <&pm8038 50 IRQ_TYPE_EDGE_RISING>, <&pm8038 51 IRQ_TYPE_EDGE_RISING>;
 			debounce = <15625>;
 			pull-up;
 		};
@@ -27,7 +26,7 @@
 
 		pm8038_gpio: gpio@150 {
 			compatible = "qcom,pm8038-gpio", "qcom,ssbi-gpio";
-			reg = <0x150 0x160>;
+			reg = <0x150>;
 			interrupt-controller;
 			#interrupt-cells = <2>;
 			gpio-controller;
@@ -49,15 +48,14 @@
 
 		rtc@11d {
 			compatible = "qcom,pm8921-rtc";
-			interrupt-parent = <&pm8038>;
-			interrupts = <39 IRQ_TYPE_EDGE_RISING>;
 			reg = <0x11d>;
+			interrupts-extended = <&pm8038 39 IRQ_TYPE_EDGE_RISING>;
 			allow-set-time;
 		};
 
-		xoadc: xoadc@197 {
+		pm8038_xoadc: xoadc@197 {
 			compatible = "qcom,pm8038-adc";
-			reg = <197>;
+			reg = <0x197>;
 			interrupts-extended = <&pm8038 78 IRQ_TYPE_EDGE_RISING>;
 			#address-cells = <2>;
 			#size-cells = <0>;
@@ -120,13 +118,13 @@
 	 */
 	iio-hwmon {
 		compatible = "iio-hwmon";
-		io-channels = <&xoadc 0x00 0x01>, /* Battery */
-			    <&xoadc 0x00 0x02>, /* DC in (charger) */
-			    <&xoadc 0x00 0x04>, /* VPH the main system voltage */
-			    <&xoadc 0x00 0x0b>, /* Die temperature */
-			    <&xoadc 0x00 0x0c>, /* Reference voltage 1.25V */
-			    <&xoadc 0x00 0x0d>, /* Reference voltage 0.625V */
-			    <&xoadc 0x00 0x0e>; /* Charger temperature */
+		io-channels = <&pm8038_xoadc 0x00 0x01>, /* Battery */
+			    <&pm8038_xoadc 0x00 0x02>, /* DC in (charger) */
+			    <&pm8038_xoadc 0x00 0x04>, /* VPH the main system voltage */
+			    <&pm8038_xoadc 0x00 0x0b>, /* Die temperature */
+			    <&pm8038_xoadc 0x00 0x0c>, /* Reference voltage 1.25V */
+			    <&pm8038_xoadc 0x00 0x0d>, /* Reference voltage 0.625V */
+			    <&pm8038_xoadc 0x00 0x0e>; /* Charger temperature */
 	};
 
 	usb_switch: mux-controller {
