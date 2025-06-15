@@ -128,3 +128,7 @@
 
 &cpu0 { operating-points-v2 = <&cpu_opp_table>; vdd-core-supply = <&saw0_vreg>; };
 &cpu1 { operating-points-v2 = <&cpu_opp_table>; vdd-core-supply = <&saw1_vreg>; };
+
+&rpm {
+	compatible = "qcom,rpm-msm8930-pm8038";
+};

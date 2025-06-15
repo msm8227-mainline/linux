@@ -97,3 +97,7 @@
 
 &cpu0 { operating-points-v2 = <&cpu_opp_table>; };
 &cpu1 { operating-points-v2 = <&cpu_opp_table>; };
+
+&rpm {
+	compatible = "qcom,rpm-msm8930-pm8917";
+};
