@@ -746,6 +746,16 @@ config CHARGER_PM8916_LBC
 	  To compile this driver as module, choose M here: the
 	  module will be called pm8916_lbc.
 
+config CHARGER_PM8921
+	tristate "Qualcomm PM8921 Charger support"
+	depends on MFD_PM8XXX || COMPILE_TEST
+	depends on OF
+	depends on EXTCON
+	depends on REGULATOR
+	help
+	  Say Y here to add support for the PM8921 Charger found in
+	  some Qualcomm PMICs like PM8921 and PM8917.
+
 config CHARGER_BQ2415X
 	tristate "TI BQ2415x battery charger driver"
 	depends on I2C
