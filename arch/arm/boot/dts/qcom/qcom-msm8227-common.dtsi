@@ -16,8 +16,6 @@
 / {
 	#address-cells = <1>;
 	#size-cells = <1>;
-	model = "Qualcomm MSM8930";
-	compatible = "qcom,msm8930";
 	interrupt-parent = <&intc>;
 
 	reserved-memory {
