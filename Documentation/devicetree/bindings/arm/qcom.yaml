@@ -76,6 +76,7 @@ properties:
               - nokia,fame
               - sony,nicki
           - const: qcom,msm8227
+          - const: qcom,msm8930
 
       - items:
           - enum:

@@ -17,6 +17,7 @@
 			interrupts-extended = <&pm8038 50 IRQ_TYPE_EDGE_RISING>, <&pm8038 51 IRQ_TYPE_EDGE_RISING>;
 			debounce = <15625>;
 			pull-up;
+			wakeup-source;
 		};
 
 		vibrator@4a {
