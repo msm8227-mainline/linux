@@ -124,15 +124,9 @@
 		compatible = "qcom,rpm-pm8917-regulators";
 		vdd_l1_l2_l12_l18-supply = <&pm8917_s4>;
 		vdd_l21_l23_l29-supply = <&pm8917_s8>;
-		vdd_l24-supply = <&pm8917_s1>;
-		vdd_l25-supply = <&pm8917_s1>;
-		vdd_l26-supply = <&pm8917_s7>;
-		vdd_l27-supply = <&pm8917_s7>;
-		vdd_l28-supply = <&pm8917_s7>;
-		vdd_l29-supply = <&pm8917_s8>;
-		vin_lvs1_3_6-supply = <&pm8917_s4>;
-		vin_lvs2-supply = <&pm8917_s4>;
-		vin_lvs4_5_7-supply = <&pm8917_s4>;
+		vdd_l24_l25-supply = <&pm8917_s1>;
+		vdd_l26_l27_l28-supply = <&pm8917_s7>;
+		vin_lvs1_3_4_5_6_7-supply = <&pm8917_s4>;
 
 		/* Buck SMPS */
 		pm8917_s1: s1 {
