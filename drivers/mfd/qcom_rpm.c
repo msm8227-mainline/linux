@@ -393,14 +393,14 @@ static const struct qcom_rpm_resource msm8930_pm8917_rpm_resource_table[] = {
 	[QCOM_RPM_PM8917_LDO34] =		{ 166, 107, 68, 2 },
 	[QCOM_RPM_PM8917_LDO35] =		{ 168, 109, 69, 2 },
 	[QCOM_RPM_PM8917_LDO36] =		{ 170, 111, 70, 2 },
-	[QCOM_RPM_PM8917_CLK1] =		{ 172, 113, 63, 2 },
-	[QCOM_RPM_PM8917_CLK2] =		{ 174, 115, 64, 2 },
-	[QCOM_RPM_PM8917_LVS1] =		{ 176, 117, 65, 1 },
-	[QCOM_RPM_PM8917_LVS3] =		{ 177, 118, 66, 1 },
-	[QCOM_RPM_PM8917_LVS4] =		{ 178, 119, 65, 1 },
-	[QCOM_RPM_PM8917_LVS5] =		{ 179, 120, 66, 1 },
-	[QCOM_RPM_PM8917_LVS6] =		{ 180, 121, 65, 1 },
-	[QCOM_RPM_PM8917_LVS7] =		{ 181, 122, 66, 1 },
+	[QCOM_RPM_PM8917_CLK1] =		{ 172, 113, 71, 2 },
+	[QCOM_RPM_PM8917_CLK2] =		{ 174, 115, 72, 2 },
+	[QCOM_RPM_PM8917_LVS1] =		{ 176, 117, 73, 1 },
+	[QCOM_RPM_PM8917_LVS3] =		{ 177, 118, 74, 1 },
+	[QCOM_RPM_PM8917_LVS4] =		{ 178, 119, 75, 1 },
+	[QCOM_RPM_PM8917_LVS5] =		{ 179, 120, 76, 1 },
+	[QCOM_RPM_PM8917_LVS6] =		{ 180, 121, 77, 1 },
+	[QCOM_RPM_PM8917_LVS7] =		{ 181, 122, 78, 1 },
 	// TODO: NCP
 	[QCOM_RPM_CXO_BUFFERS] =		{ 184, 125, 81, 1 },
 	[QCOM_RPM_USB_OTG_SWITCH] =		{ 185, 126, 82, 1 },
@@ -633,8 +633,10 @@ int qcom_rpm_write(struct qcom_rpm *rpm,
 		return -EINVAL;
 
 	res = &data->resource_table[resource];
-	if (WARN_ON(res->size != count))
+	if (WARN_ON(res->size != count)) {
+		pr_err("%d != %d\n", res->size, count);
 		return -EINVAL;
+	}
 
 	mutex_lock(&rpm->lock);
 
