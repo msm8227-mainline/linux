@@ -1032,6 +1032,7 @@ static const struct rpm_regulator_data rpm_pm8917_regulators[] = {
 	{ "lvs7", QCOM_RPM_PM8917_LVS7, &pm8921_switch, "vin_lvs1_3_4_5_6_7" },
 
 	{ "usb-switch", QCOM_RPM_USB_OTG_SWITCH, &pm8921_switch, "vin_5vs" },
+	{ }
 };
 
 static const struct rpm_regulator_data rpm_pm8921_regulators[] = {
