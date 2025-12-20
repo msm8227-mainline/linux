@@ -288,8 +288,8 @@
 		};
 
 		pm8917_l22: l22 {
-			regulator-min-microvolt = <2900000>;
-			regulator-max-microvolt = <2900000>;
+			regulator-min-microvolt = <2750000>;
+			regulator-max-microvolt = <2750000>;
 			bias-pull-down;
 		};
 
